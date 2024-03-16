@@ -26,4 +26,6 @@ sudo docker compose up
 nest new api
 cd api
 nest generate app auth 
+nest g library shared
+npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager
 ```
