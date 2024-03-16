@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3'
 services:
   rabbitmq:
     image: rabbitmq:3-management
@@ -13,8 +13,8 @@ services:
       - .env
 
   auth:
-    build: 
-      content: ./
+    build:
+      context: ./
       dockerfile: ./apps/auth/Dockerfile
     env_file:
       - .env
@@ -22,9 +22,9 @@ services:
       - rabbitmq
       - postgres
     volumes:
-      - .:/usr/src/app # any changes to base folder should be reflected
+      - .:/usr/src/app # any change to base folder should be reflected
       - /usr/src/app/node_modules
-    command: npm run start:dev auth # overrides CMD from Dockerfile
+    command: npm run start:dev auth # overrides CMD from dockerfile
 
   presence:
     build:
@@ -62,8 +62,8 @@ services:
     command: npm run start:dev chat # overrides CMD from dockerfile
 
   api:
-    build: 
-      content: ./
+    build:
+      context: ./
       dockerfile: ./apps/api/Dockerfile
     ports:
       - '4000:5000'
@@ -72,15 +72,16 @@ services:
     depends_on:
       - rabbitmq
       - auth
+      - presence
     volumes:
-      - .:/usr/src/app # any changes to base folder should be reflected
+      - .:/usr/src/app # any change to base folder should be reflected
       - /usr/src/app/node_modules
-    command: npm run start:dev api # overrides CMD from Dockerfile
+    command: npm run start:dev api
 
   postgres:
     image: postgres
     env_file:
-     - .env
+      - .env
     ports:
       - '5432:5432'
     volumes:

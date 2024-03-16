@@ -42,6 +42,8 @@ nest g library shared
 npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager 
 
 npm install --save @nestjs/typeorm typeorm pg
+
+npm i @nestjs/jwt @nestjs/passport @nestjs/platform-socket.io @nestjs/websockets bcrypt cache-manager cache-manager-redis-yet passport passport-jwt redis rimraf socket.io
 ``` 
 
 ```bash
