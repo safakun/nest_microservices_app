@@ -37,4 +37,17 @@ npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager
 npm run start:dev auth
 npm run start:dev api
 
-```
+``` 
+
+- add .env file to api folder
+```bash
+RABBITMQ_DEFAULT_USER=user
+RABBITMQ_DEFAULT_PASS=pass 
+
+RABBITMQ_USER=user
+RABBITMQ_PASS=pass
+RABBITMQ_HOST=localhost:5672
+RABBITMQ_AUTH_QUEUE=auth_queue 
+
+``` 
+
