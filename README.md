@@ -1,7 +1,11 @@
 # Nest microservices RabbitMQ Postgres Redis
+https://github.com/Jon-Peppinck/messenger-api 
 
 Part 1
 https://www.youtube.com/watch?app=desktop&v=LJwZxSD1QOM 
+
+Part 2
+https://www.youtube.com/watch?v=m_1ZoJSi0kI 
 
 
 Client -> API -> Auth -> PG 
@@ -46,8 +50,25 @@ RABBITMQ_DEFAULT_PASS=pass
 
 RABBITMQ_USER=user
 RABBITMQ_PASS=pass
-RABBITMQ_HOST=localhost:5672
-RABBITMQ_AUTH_QUEUE=auth_queue 
+RABBITMQ_HOST=rabbitmq:5672
+
+RABBITMQ_AUTH_QUEUE=auth_queue
+RABBITMQ_PRESENCE_QUEUE=presence_queue
+RABBITMQ_CHAT_QUEUE=chat_queue
+
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=messenger
+
+POSTGRES_URI=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+PGADMIN_DEFAULT_EMAIL=jon@gmail.com
+PGADMIN_DEFAULT_PASSWORD=password
+
+JWT_SECRET=secret
+
+REDIS_PASS=password
+REDIS_URI=redis://default:${REDIS_PASS}@redis:6379 
 
 ``` 
 
