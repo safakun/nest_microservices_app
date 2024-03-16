@@ -8,7 +8,7 @@ import { ClientProxyFactory, Transport } from '@nestjs/microservices';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: './env',
+      envFilePath: './.env',
     })
   ],
   controllers: [AppController],
