@@ -36,6 +36,24 @@
       "compilerOptions": {
         "tsConfigPath": "libs/shared/tsconfig.lib.json"
       }
+    },
+    "chat": {
+      "type": "application",
+      "root": "apps/chat",
+      "entryFile": "main",
+      "sourceRoot": "apps/chat/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/chat/tsconfig.app.json"
+      }
+    },
+    "presence": {
+      "type": "application",
+      "root": "apps/presence",
+      "entryFile": "main",
+      "sourceRoot": "apps/presence/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/presence/tsconfig.app.json"
+      }
     }
   }
 }

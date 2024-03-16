@@ -7,6 +7,9 @@ https://www.youtube.com/watch?app=desktop&v=LJwZxSD1QOM
 Part 2
 https://www.youtube.com/watch?v=m_1ZoJSi0kI 
 
+Part 3
+https://www.youtube.com/watch?v=rPkupXmPAR4
+
 
 Client -> API -> Auth -> PG 
             | -> CHAT -> Presense service -> Call
@@ -33,8 +36,12 @@ http://localhost:15672/
 nest new api
 cd api
 nest generate app auth 
+nest generate app chat
+nest generate app presence
 nest g library shared
-npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager
+npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager 
+
+npm install --save @nestjs/typeorm typeorm pg
 ``` 
 
 ```bash
