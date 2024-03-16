@@ -32,7 +32,8 @@ import { ClientProxyFactory, Transport } from '@nestjs/microservices';
             }
           }
         });
-      }
+      },
+      inject: [ConfigService],
       }
   ],
 })

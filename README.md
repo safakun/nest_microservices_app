@@ -35,5 +35,6 @@ npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager
 
 ```bash
 npm run start:dev auth
+npm run start:dev api
 
 ```
