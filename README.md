@@ -17,9 +17,12 @@ nest -v
 
 2. Run rabbitMQ in docker
 ```bash
-cd rabbitmq
+cd api
 sudo docker compose up
 ``` 
+http://localhost:15672/
+- user
+- pass
 
 3. Creating new nestjs API service
 ```bash
@@ -28,4 +31,5 @@ cd api
 nest generate app auth 
 nest g library shared
 npm i @nestjs/config @nestjs/microservices amqplib amqp-connection-manager
-```
+``` 
+
